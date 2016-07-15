@@ -29,7 +29,6 @@
 
 ; This time we won't reverse the list, but this also won't work. The initial
 ; answer on the first iteration is empty - when we do (cons '() 1) we get
-; (() . 1) back, since we've put 1 after the null terminator identicating the
-; end of the list. We'll then append to that result (which is also null-terminated)
-; on the next iteraration, giving ((() . 1) . 4) and so on for the rest of the
-; list elements we process.
+; (() . 1) back, so our end result will be a list who's first element is an
+; empty list and whose subsequent elements are squares of the input list's
+; elements.
